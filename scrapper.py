@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import smtplib
+#failing to load the imports.2020-05-06
 
 URL = 'https://www.amazon.com/Sony-Full-Frame-Mirrorless-Digital-28-70mm/dp/B00FRDV06I/ref=sr_1_3?crid=2AZ92TRSHFZQ3&keywords=sony+a7&qid=1563390623&s=electronics&sprefix=sony+a7%2Celectronics%2C444&sr=1-3'
 
@@ -34,15 +35,15 @@ def send_mail():
     server.starttls()
     server.ehlo()
 
-    server.login('rodneymthunzi@gmail.com', '')
+    server.login('rodneymthunzi@gmail.com', 'andileonamandla@gmail.com' '')
 
-    subject = 'Price fell down!'
+    subject = 'Price Fall Down!'
     body = 'Check the amazon link https://www.amazon.com/Sony-Full-Frame-Mirrorless-Digital-28-70mm/dp/B00FRDV06I/ref=sr_1_3?crid=2AZ92TRSHFZQ3&keywords=sony+a7&qid=1563390623&s=electronics&sprefix=sony+a7%2Celectronics%2C444&sr=1-3'
 
     msg = f"Subject: {subject} \n\n{body}"
 
 server.send_mail(
-    'rodneymthunzi@gmail.com',
+    'rodneymthunzi@gmail.com', 'andileonamandla@gmail.com'
     msg
     )
     print('HEY EMAIL HAS BEEN SENT!')
@@ -51,4 +52,4 @@ server.send_mail(
 
 while (True):
     check_price()
-    time.sleep(60)
+    time.sleep(120)
