@@ -53,4 +53,4 @@ server.send_mail(
 
 while (True):
     check_price()
-    time.sleep(60)
+    time.sleep(1060)
