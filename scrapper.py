@@ -1,8 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 import smtplib
---still to try after being blocked from a couple of sites that will not be mentioned at the moment..
---Lawl.......
 
 URL = 'https://www.amazon.com/Sony-Full-Frame-Mirrorless-Digital-28-70mm/dp/B00FRDV06I/ref=sr_1_3?crid=2AZ92TRSHFZQ3&keywords=sony+a7&qid=1563390623&s=electronics&sprefix=sony+a7%2Celectronics%2C444&sr=1-3'
 
@@ -43,10 +41,7 @@ def send_mail():
 
     msg = f"Subject: {subject} \n\n{body}"
 
-server.send_mail(
-    'rodneymthunzi@gmail.com',
-    msg
-    )
+server.send_mail('rodneymthunzi@gmail.com',msg)
     print('HEY EMAIL HAS BEEN SENT!')
 
     server.quit()
